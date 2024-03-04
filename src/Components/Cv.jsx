@@ -7,14 +7,19 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import CVCard from './CVcard';
-import { useReactToPrint } from 'react-to-print';
 
 function CV() {
   const componentRef = React.useRef();
 
-  const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
-  });
+  const handleDownload = () => {
+    const pdfUrl = 'cv.pdf';
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'cv.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <>
@@ -117,7 +122,7 @@ function CV() {
         </Card>
       </div>
       <button
-        onClick={handlePrint}
+        onClick={handleDownload}
         style={{
           padding: '10px 20px',
           fontSize: '16px',
@@ -133,7 +138,7 @@ function CV() {
           zIndex: '1000',
         }}
       >
-        Guardar
+        Descargar
       </button>
 
     </>
