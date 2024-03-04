@@ -6,10 +6,8 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import { useReactToPrint } from "react-to-print";
 import PersonIcon from "@mui/icons-material/Person";
 import BookIcon from "@mui/icons-material/Book";
-import { List, ListItem, ListItemText } from "@mui/material";
 
 function AboutMe() {
   const componentRef = React.useRef();
