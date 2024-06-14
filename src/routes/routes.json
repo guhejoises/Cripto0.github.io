@@ -1,0 +1,22 @@
+{
+    "routes": [
+        {
+            "path": "/",
+            "name": "Home",
+            "component": "HomePage.jsx",
+            "addMenu": true
+        },
+        {
+            "path": "/cv",
+            "name": "Curriculum",
+            "component": "CVPage.jsx",
+            "addMenu": false
+        },
+        {
+            "path": "/llave",
+            "name": "Llave",
+            "component": "Llave.jsx",
+            "addMenu": false
+        }
+    ]
+}
